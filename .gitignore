@@ -1,0 +1,13 @@
+.cache/
+build/
+dist/
+out/
+.vs/
+.idea/
+CMakeUserPresets.json
+*.user
+*.pdb
+*.ilk
+*.obj
+*.res
+*.log
