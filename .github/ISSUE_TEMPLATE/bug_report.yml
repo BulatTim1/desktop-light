@@ -1,0 +1,28 @@
+name: Bug report
+description: Report a brightness, keyboard or startup problem
+body:
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version and build
+      placeholder: Windows 11 24H2, build 26100
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Monitor and keyboard models
+      description: Include the cable/dock type and whether HDR is enabled.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Steps and observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Optional read-only diagnostics
+      description: Attach or paste output from the --diagnose command.
