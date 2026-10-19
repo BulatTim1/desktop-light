@@ -1,5 +1,7 @@
 # Desktop Light · Cursor Brightness
 
+**English** · [Русский](README.ru.md)
+
 <img src="assets/icon.svg" width="64" height="64" alt="Cursor Brightness sun icon">
 
 A small standalone Windows app with brightness keys that follow **the display
@@ -45,6 +47,7 @@ while signed into GitHub:
 - `CursorBrightness-<version>-windows-x64.zip`: portable app; extract to a
   permanent folder and double-click `CursorBrightness.exe`.
 - `CursorBrightness-<version>-source.zip`: matching source and build files.
+- `SHA256SUMS.txt`: checksums for the release packages.
 
 Requirements: **Windows 11 24H2 or newer, x64**. DDC/CI must be enabled in the
 monitor’s menu and supported by the cable/dock. Some picture modes lock hardware

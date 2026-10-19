@@ -1,5 +1,7 @@
 # Publish on GitHub
 
+**English** · [Русский](PUBLISHING.ru.md)
+
 The project repository is [BulatTim1/desktop-light](https://github.com/BulatTim1/desktop-light).
 For a new local checkout, clone that repository. To publish changes from an
 existing checkout, review the diff, commit, and push:
@@ -29,7 +31,10 @@ git tag v1.2.1
 git push origin v1.2.1
 ```
 
-The tag workflow creates a GitHub Release containing the packages. For later
+The tag workflow creates a GitHub Release containing the packages. When present,
+`docs/releases/<tag>.md` supplies the release notes; otherwise GitHub generates
+them. Keep a Russian version alongside it as `<tag>.ru.md`; the published notes
+can include both languages. Do not move published version tags. For later
 versions, update CMake's project version, app version metadata, installer default
 and diagnostic version before tagging.
 
@@ -38,3 +43,6 @@ signing key or local diagnostic upload is included. Keep GPL attribution for the
 Windhawk integration and its matching source archive. Do not distribute cached
 installers, local settings, symbol caches or runtime logs. The packaging script
 includes only a freshly prepared minimal runtime and an explicit source allowlist.
+
+Check that each release includes the installer, portable ZIP, source ZIP and
+`SHA256SUMS.txt`, with English and Russian documentation in the relevant packages.

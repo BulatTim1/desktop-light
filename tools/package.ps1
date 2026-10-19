@@ -13,7 +13,10 @@ $stageRoot=Join-Path $projectDirectory ('build\package-'+[guid]::NewGuid().ToStr
 $stageDirectory=Join-Path $stageRoot "CursorBrightness-$version-windows-x64"
 New-Item -ItemType Directory -Path $stageDirectory -Force | Out-Null
 Copy-Item -LiteralPath $executable -Destination $stageDirectory -Force
-foreach($name in @('LICENSE','README.md','THIRD_PARTY_NOTICES.md')){Copy-Item -LiteralPath "$projectDirectory\$name" -Destination $stageDirectory -Force}
+foreach($name in @('LICENSE','README.md','README.ru.md','CONTRIBUTING.md','CONTRIBUTING.ru.md','THIRD_PARTY_NOTICES.md','THIRD_PARTY_NOTICES.ru.md')){Copy-Item -LiteralPath "$projectDirectory\$name" -Destination $stageDirectory -Force}
+Copy-Item -LiteralPath "$projectDirectory\docs","$projectDirectory\assets" -Destination $stageDirectory -Recurse -Force
+New-Item -ItemType Directory -Path "$stageDirectory\tests" -Force | Out-Null
+Copy-Item -Path "$projectDirectory\tests\*.md" -Destination "$stageDirectory\tests" -Force
 Copy-Item -LiteralPath "$projectDirectory\third_party" -Destination $stageDirectory -Recurse -Force
 if(!(Test-Path -LiteralPath "$BuildDirectory\integration\windhawk\windhawk.exe")){throw 'Run tools/prepare-integration.ps1 with the build integration directory before packaging.'}
 Copy-Item -LiteralPath "$BuildDirectory\integration" -Destination $stageDirectory -Recurse -Force
@@ -26,7 +29,7 @@ function Write-Zip([string]$directory,[string]$archive) {
 Write-Zip $stageDirectory $portableZip
 # Explicit allowlist excludes caches, local configuration, logs and Git data.
 $sourceDirectories=@('app','src','assets','packaging','tools','tests','mods','upstream','docs','.github','third_party')
-$sourceFiles=@('CMakeLists.txt','README.md','LICENSE','THIRD_PARTY_NOTICES.md','CONTRIBUTING.md','.gitignore','.gitattributes')
+$sourceFiles=@('CMakeLists.txt','README.md','README.ru.md','LICENSE','THIRD_PARTY_NOTICES.md','THIRD_PARTY_NOTICES.ru.md','CONTRIBUTING.md','CONTRIBUTING.ru.md','.gitignore','.gitattributes')
 $sourceStage=Join-Path $stageRoot "CursorBrightness-$version-source"
 New-Item -ItemType Directory -Path $sourceStage -Force | Out-Null
 foreach($directory in $sourceDirectories){

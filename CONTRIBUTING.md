@@ -1,5 +1,7 @@
 # Contributing
 
+**English** · [Русский](CONTRIBUTING.ru.md)
+
 Build with the native CMake instructions in README.md and run CTest before
 submitting a pull request. Describe the observed/resulting behavior, Windows
 build, and validation performed.
@@ -26,3 +28,4 @@ value unless the user is deliberately choosing a new level.
 
 Keep upstream GPL and runtime notices. Never commit `build/`, `dist/`, `.cache/`,
 device serials, personal paths, settings or local diagnostic output.
+Keep English and Russian documentation and language links in sync.

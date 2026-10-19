@@ -41,7 +41,14 @@ Source: "{#BuildDir}\integration\*"; DestDir: "{app}\integration"; Excludes: "wi
 Source: "{#BuildDir}\integration\windhawk\Engine\*"; DestDir: "{app}\integration\windhawk\Engine"; Flags: recursesubdirs createallsubdirs onlyifdoesntexist
 Source: "..\LICENSE"; DestDir: "{app}"
 Source: "..\README.md"; DestDir: "{app}"
+Source: "..\README.ru.md"; DestDir: "{app}"
+Source: "..\CONTRIBUTING.md"; DestDir: "{app}"
+Source: "..\CONTRIBUTING.ru.md"; DestDir: "{app}"
+Source: "..\assets\icon.svg"; DestDir: "{app}\assets"
 Source: "..\THIRD_PARTY_NOTICES.md"; DestDir: "{app}"
+Source: "..\THIRD_PARTY_NOTICES.ru.md"; DestDir: "{app}"
+Source: "..\docs\*.md"; DestDir: "{app}\docs"; Flags: recursesubdirs createallsubdirs
+Source: "..\tests\*.md"; DestDir: "{app}\tests"
 Source: "..\third_party\licenses\*"; DestDir: "{app}\third_party\licenses"; Flags: recursesubdirs createallsubdirs
 
 [Icons]

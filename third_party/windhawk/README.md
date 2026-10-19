@@ -1,5 +1,7 @@
 # Windhawk 1.7.3 source
 
+**English** · [Русский](README.ru.md)
+
 `Windhawk-1.7.3-source.zip` is the unmodified official v1.7.3 source archive:
 https://github.com/ramensoftware/windhawk/archive/refs/tags/v1.7.3.zip
 

@@ -1,5 +1,7 @@
 # Cursor brightness for Windows 11
 
+**English** · [Русский](WINDHAWK.ru.md)
+
 This guide covers the **separate development / existing-Windhawk installation**.
 Most users should use the complete installer described in the root README,
 which includes its own private runtime and controls its lifecycle automatically.
@@ -34,7 +36,7 @@ that follow the mouse cursor. Tested on Windows 11 build **26100.9457**, with a
   overlays are used. A missing or unavailable selected monitor is never replaced
   by another target.
 
-## Installed on this machine
+## Development installation
 
 The portable Windhawk runtime is in `.cache\windhawk` inside this project.
 It hosts the extension without installing a display driver or a system service.

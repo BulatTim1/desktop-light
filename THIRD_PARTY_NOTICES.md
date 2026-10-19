@@ -1,5 +1,7 @@
 # Third-party notices
 
+**English** · [Русский](THIRD_PARTY_NOTICES.ru.md)
+
 Cursor Brightness is distributed under **GPL-3.0-only**. The complete license is
 in `LICENSE`. Modified source and build instructions are included in this
 repository and in release source archives.
@@ -21,7 +23,8 @@ Derived from **Per-monitor brightness and more in Quick Settings v3.0** by
 
 The complete distribution contains an unmodified minimal **Windhawk 1.7.3**
 runtime, by Michael Maltsev / Ramen Software, licensed under GPL-3.0.
-Its private daemon loads the Quick Settings extension into Windows ShellHost.
+Its private daemon loads the Quick Settings extension into Windows ShellHost
+and the native brightness popup helper into Explorer.
 No compiler, Windhawk UI, system service, or upstream installer is shipped.
 
 - Official project: https://github.com/ramensoftware/windhawk

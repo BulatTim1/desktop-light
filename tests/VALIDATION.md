@@ -1,9 +1,13 @@
 # Validation and hardware checklist
 
+**English** · [Русский](VALIDATION.ru.md)
+
 ## Verified locally
 
 Windows 11 build 26100.9457, x64; local LLVM/MinGW static application build.
-The CMake/MSVC GitHub workflow is supplied but has not run in this local session.
+The CMake/MSVC GitHub workflow also passed compilation and tests; see
+[CI runs](https://github.com/BulatTim1/desktop-light/actions/workflows/build.yml)
+for packaging results.
 
 - Shared behavior tests passed: negative display coordinates and edges, cursor
   selection, panel latching, deferred discovery, disconnect without retargeting,
